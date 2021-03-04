@@ -1,0 +1,14 @@
+This is a music player.
+
+Features -
+    -Select songs, and play and stop.
+    -Repeat 1|All
+    -Random
+    -Save Playlist
+    -Always on top.
+
+    -Auto Albums based on folder structure.
+    -Definable Albums - This will allow you to create albums by creating a new one with a selection of songs. This will
+    be added to the albums library with or without a picture.
+
+    -Song play tracking - Number of times played.
