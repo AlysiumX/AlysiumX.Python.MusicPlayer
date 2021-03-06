@@ -1,6 +1,7 @@
 import tkinter as root
 from tkinter import Button, Listbox
 from views.open_file_dialog import OpenFileDialog
+from Logic.player import Player
 
 
 class PlayerView:
@@ -12,6 +13,7 @@ class PlayerView:
         self.button_stop = Button(self.window, text=f"Stop", command=self.__button_stop_clicked)
         self.button_open = Button(self.window, text=f"Open", command=self.__button_open_clicked)
         self.song_list = Listbox(self.window)
+        self.player = Player()
 
     def __button_open_clicked(self):
         open_file_dialog = OpenFileDialog()
@@ -20,10 +22,11 @@ class PlayerView:
             self.song_list.insert(index, directory)
 
     def __button_play_clicked(self):
-        pass
+        selected_song = self.song_list.get(self.song_list.curselection())
+        self.player.play(selected_song)
 
     def __button_stop_clicked(self):
-        pass
+        self.player.stop()
 
     def show(self):
         self.window.title("Music Player")

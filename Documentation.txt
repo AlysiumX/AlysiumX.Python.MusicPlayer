@@ -12,3 +12,4 @@ Features -
     be added to the albums library with or without a picture.
 
     -Song play tracking - Number of times played.
+    -Keypad entry, 0-9 to jump to that percentage based on 10x
